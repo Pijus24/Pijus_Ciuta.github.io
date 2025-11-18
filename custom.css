@@ -1,0 +1,269 @@
+/* ============================================================
+   CUSTOM.CSS – Pijus Čiūta
+   Sutvarkytas, optimizuotas, su nauja spalvų schema
+   Profesionalus, modernus ir aiškiai atskiriantis tavo darbus
+============================================================ */
+
+/* ---------------------------------------------
+   1. BENDRAS STILIUS + TIPOGRAFIJA
+--------------------------------------------- */
+body {
+  font-family: "Mulish", sans-serif;
+  color: #1a1d24;
+  background-color: #f4f7fb;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #0f1e45;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.3rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.45rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+p { color: #2c3448; font-size: 1.08rem; }
+
+a {
+  color: #2f6fed;
+  transition: 0.25s;
+}
+
+a:hover {
+  color: #1743a7;
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------
+   2. MYGTUKAI – nauja spalvų schema
+--------------------------------------------- */
+button, .btn {
+  border-radius: 14px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+/* Pagrindinis gradientinis mėlynas */
+.btn-primary, button[type="submit"] {
+  background: linear-gradient(45deg, #305eff, #4ab4ff);
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(48, 94, 255, 0.3);
+}
+
+.btn-primary:hover, button[type="submit"]:hover {
+  filter: brightness(1.12);
+  transform: translateY(-3px);
+}
+
+/* Antrinis mygtukas */
+.btn-secondary {
+  background-color: #e9eef6;
+  color: #0f1e45;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #d3dceb;
+  transform: translateY(-3px);
+}
+
+/* Get Started */
+.btn-getstarted {
+  background: linear-gradient(45deg, #2f6fed, #50a7ff);
+  color: #fff !important;
+  padding: 12px 34px;
+  border-radius: 16px;
+}
+
+.btn-getstarted:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
+}
+
+/* ---------------------------------------------
+   3. PROGRESO JUOSTA – nauja schema
+--------------------------------------------- */
+.skills-list .progress {
+  height: 14px !important;
+  background-color: #dce4f5 !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.skills-list .progress-bar {
+  background: linear-gradient(90deg, #1743a7, #4ab4ff) !important;
+  border-radius: 10px !important;
+  transition: width 0.6s ease-in-out;
+}
+
+.skills-list .progress:hover .progress-bar {
+  filter: brightness(1.2);
+}
+
+/* ---------------------------------------------
+   4. SEKCIONŲ TARPŲ SISTEMA
+--------------------------------------------- */
+section {
+  padding: 100px 0 !important;
+}
+
+.section-title p {
+  margin-top: 12px;
+  margin-bottom: 28px;
+  color: #32405c;
+}
+
+/* ---------------------------------------------
+   5. BLOKAI – kortelės, šešėliai, hover efektai
+--------------------------------------------- */
+.profile-card,
+.service-item,
+.portfolio-card,
+.exp-card {
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.profile-card:hover,
+.service-item:hover,
+.portfolio-card:hover,
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------------------------------------
+   6. FOTERIUI IR HEADERIUI GERESNIS KONTRASTAS
+--------------------------------------------- */
+footer, header {
+  background-color: #0f1e45 !important;
+}
+
+footer p, footer a, header a, header .sitename {
+  color: #dce4f5 !important;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+}
+
+/* ---------------------------------------------
+   7. SCROLL TOP MYGTUKAS
+--------------------------------------------- */
+#scroll-top {
+  background: linear-gradient(45deg, #305eff, #4ab4ff);
+  color: #fff;
+}
+
+#scroll-top:hover {
+  filter: brightness(1.15);
+}
+/* ====== CUSTOM LISTS ====== */
+.styled-ol {
+  counter-reset: item;
+  margin-left: 20px;
+}
+
+.styled-ol li {
+  counter-increment: item;
+  margin-bottom: 12px;
+  padding-left: 40px;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.styled-ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #305eff;
+  color: #fff;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nested List */
+.nested-ul {
+  margin-top: 8px;
+  margin-left: 25px;
+}
+
+.nested-ul li {
+  list-style-type: circle;
+  color: #1743a7;
+  margin-bottom: 6px;
+}
+
+/* Unordered list (custom bullets) */
+.styled-ul li {
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.styled-ul li::before {
+  content: \"\u2022\";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  font-size: 1.8rem;
+  color: #4ab4ff;
+}
+
+/* ====== SERVICE TABLE ====== */
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 1.05rem;
+}
+
+.services-table th,
+.services-table td {
+  padding: 16px;
+  text-align: center;
+}
+
+/* Header row */
+.services-table thead tr {
+  background: #305eff;
+  color: #ffffff;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+/* Zebra style */
+.services-table tbody tr:nth-child(odd) {
+  background: #1a2130;
+}
+
+.services-table tbody tr:nth-child(even) {
+  background: #1a1d2e;
+}
+
+/* Hover effect */
+.services-table tbody tr:hover {
+  background: #242642;
+  transition: 0.25s;
+}
+
